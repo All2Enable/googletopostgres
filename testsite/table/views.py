@@ -20,7 +20,7 @@ def index(request):
     if request.method == 'POST':
         updatetable()
         s = TableConsumer()
-        s.stream('tableupdate')
+        s.receive('table update')
 
         # s = TableConsumer()
         # s.sendsmth()
