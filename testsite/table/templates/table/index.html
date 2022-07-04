@@ -1,0 +1,40 @@
+{% extends 'table/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+<!--                table-->
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Заказ №</th>
+                            <th scope="col">Стоимость в $</th>
+                            <th scope="col">Срок поставки</th>
+                            <th scope="col">Стоимость в рублях</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for zakaz in table %}
+                        <tr>
+                            <th scope="row">{{ zakaz.id }}</th>
+                            <td>{{ zakaz.zakaz_field }}</td>
+                            <td>{{ zakaz.stoimostvdol_field }}</td>
+                            <td>{{ zakaz.srok_postavki }}</td>
+                            <td>{{ zakaz.stoimostvrub }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+<!--                    end table-->
+            </div>
+        </div>
+    </div>
+{% endblock %}
