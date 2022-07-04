@@ -1,19 +1,5 @@
 import React, {useState, useEffect, Component} from 'react'
 import ListItem from '../components/ListItem'
-// import { w3cwebsocket as W3CWebSocket } from "websocket";
-
-
-// class Connection extends Component {
-
-//     client = new W3CWebSocket('ws://127.0.0.1:8000/table/api' + this.state.room + '/');
-
-//     componentDidMount() { 
-//         this.client.onopen = () => { 
-//             console.log('WebSocket Client Connected')
-//         }
-//     }
-// }
-
 
 
 const Tablelistpage = () => {
@@ -37,19 +23,14 @@ const Tablelistpage = () => {
     }
     
     chatSocket.onmessage = function(e){
-        let data = JSON.parse(e.data)
-        console.log('CAL:', data)
+        let mess = JSON.parse(e.data)
 
-        if (data.type === 'table') {
-            console.log('JOPOSHNIK:', data)
+        if (mess.type === 'table') {
+            getTables.call()          
             // useEffect(()=> {
             //     getTables()
             // }, [])
         }
-        else {
-            console.log(data.type)
-        }
-        return (getTables)
     }
 
   return (
