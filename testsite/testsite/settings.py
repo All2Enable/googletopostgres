@@ -29,8 +29,8 @@ ALLOWED_HOSTS = ['*',
                  'localhost', ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'script.google.com/home/projects/1QdkEQjMKNOXzdl_GW64FEf8JubaQpoN_-IiBgH58SUkEuBbxsjB8ZMTp/edit',
-    'docs.google.com/spreadsheets/d/11REUz1qelflIaaGOcoWVTAGZOfXiXim1-bBb5SeA-Uo']
+    'https://script.google.com/home/projects/1QdkEQjMKNOXzdl_GW64FEf8JubaQpoN_-IiBgH58SUkEuBbxsjB8ZMTp/edit',
+    'https://docs.google.com/spreadsheets/d/11REUz1qelflIaaGOcoWVTAGZOfXiXim1-bBb5SeA-Uo']
 
 # Application definition
 
