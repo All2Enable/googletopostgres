@@ -27,9 +27,6 @@ const Tablelistpage = () => {
 
         if (mess.type === 'table') {
             getTables.call()          
-            // useEffect(()=> {
-            //     getTables()
-            // }, [])
         }
     }
 
