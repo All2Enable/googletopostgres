@@ -11,6 +11,6 @@ and put it in database. The conditions were:
 4.  Additions: Development of a one-page web application based on Django or Flask. Front-end React.
 
 How it works: Firstly, whenever a change is made to google sheets, 
-the Google API sends a POST request to the backend on django. 
+the Google API sends a POST request(webhook) to django backend. 
 After the request, Django updates the database with the data from google sheets. 
-After that, a websocket sends the data to the frontend react js and updates it in real time. 
+After that, backend sends the data to the frontend react js through websocket connection and updates it in real time. 
